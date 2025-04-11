@@ -13,4 +13,8 @@
       <PackageReference Include="NUnit" Version="4.3.2" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Models\Responses\" />
+    </ItemGroup>
+
 </Project>

@@ -1,9 +1,12 @@
+using Framework.Api.Enums;
 using Framework.Api.Helpers;
 
 namespace Framework.Api.EnvConfigs;
 
 public class EnvConfig
 {
+    public string ApiUrl { get; }
+    public Env Env { get; }
     public string ReportDir { get; private set; }
 
 
@@ -16,9 +19,21 @@ public class EnvConfig
 
     private EnvConfig()
     {
+        Env = ConfigReader.GetEnvironment();
         ReportDir = GetReportDir();
+        ApiUrl = GetApiUrl();
     }
 
+
+    private string GetApiUrl()
+    {
+        return Env switch
+        {
+            Env.Localhost => "http://localhost:5000/api",
+
+            _ => throw new ArgumentOutOfRangeException("Not implemented")
+        };
+    }
 
     private static string GetReportDir()
     {
