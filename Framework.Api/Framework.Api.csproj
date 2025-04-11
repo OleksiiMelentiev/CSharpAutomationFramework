@@ -6,4 +6,11 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="ExtentReports" Version="5.0.4" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.4" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.4" />
+      <PackageReference Include="NUnit" Version="4.3.2" />
+    </ItemGroup>
+
 </Project>
