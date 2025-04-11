@@ -1,7 +1,7 @@
 using System.Text;
 using Common.Helpers;
 using Models;
-using Models.Requests;
+using Models.Requests.Person;
 using WireMock;
 using WireMock.RequestBuilders;
 using WireMock.ResponseBuilders;
@@ -17,8 +17,39 @@ public class PersonMock : MockBase
     public void SetMocks()
     {
         MockCreatePerson();
+        MockGetPerson();
     }
 
+
+    private void MockGetPerson()
+    {
+        Server?.Given(
+                Request.Create()
+                    .WithPath("/api/person/*")
+                    .UsingGet()
+            )
+            .RespondWith(Response.Create().WithCallback(request =>
+            {
+                var pathSegments = request.Path.Split('/');
+                var id = Guid.Parse(pathSegments.Last());
+
+                var person = PersonDbSimulation.FirstOrDefault(p => p.Id == id);
+
+                var statusCode = person == null ? 404 : 200;
+                var responseJson = person == null ? string.Empty : JsonHelper.Serialize(person);
+
+                return new ResponseMessage()
+                {
+                    StatusCode = statusCode,
+                    BodyData = new BodyData
+                    {
+                        Encoding = Encoding.UTF8,
+                        DetectedBodyType = BodyType.String,
+                        BodyAsString = responseJson,
+                    },
+                };
+            }));
+    }
 
     private void MockCreatePerson()
     {

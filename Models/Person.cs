@@ -1,4 +1,4 @@
-using Models.Requests;
+using Models.Requests.Person;
 
 namespace Models;
 

@@ -1,4 +1,4 @@
-namespace Models.Requests;
+namespace Models.Requests.Person;
 
 public class CreatePersonRequest
 {

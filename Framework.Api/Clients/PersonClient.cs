@@ -1,5 +1,5 @@
 using Common.Helpers;
-using Models.Requests;
+using Models.Requests.Person;
 
 namespace Framework.Api.Clients;
 
@@ -17,5 +17,11 @@ public class PersonClient : ClientBase
     public async Task<HttpResponseMessage> CreateAsync(CreatePersonRequest request)
     {
         return await HttpHelper.SendRequestAsync(HttpMethod.Post, _url, request);
+    }
+
+    public async Task<HttpResponseMessage> GetAsync(Guid id)
+    {
+        var url = $"{_url}/{id}";
+        return await HttpHelper.SendRequestAsync(HttpMethod.Get, url);
     }
 }
