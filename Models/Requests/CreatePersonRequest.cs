@@ -1,4 +1,4 @@
-namespace Framework.Api.Models.Requests;
+namespace Models.Requests;
 
 public class CreatePersonRequest
 {

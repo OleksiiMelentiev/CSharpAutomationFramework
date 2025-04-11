@@ -1,5 +1,5 @@
 using System.Net;
-using Framework.Api.Helpers;
+using Common.Helpers;
 using NUnit.Framework;
 
 namespace Framework.Api.ExpectedResults;

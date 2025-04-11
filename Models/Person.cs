@@ -1,6 +1,6 @@
-using Framework.Api.Models.Requests;
+using Models.Requests;
 
-namespace Framework.Api.Models;
+namespace Models;
 
 public class Person : CreatePersonRequest
 {

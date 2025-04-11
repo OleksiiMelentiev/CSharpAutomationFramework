@@ -1,10 +1,10 @@
 using System.Collections.Concurrent;
 using AventStack.ExtentReports;
-using Framework.Api.EnvConfigs;
+using Common.EnvConfigs;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 
-namespace Framework.Api.Helpers;
+namespace Common.Helpers;
 
 public class ExtentManager
 {

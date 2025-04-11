@@ -1,4 +1,4 @@
-namespace Framework.Api.Enums;
+namespace Common.Enums;
 
 public enum Env
 {

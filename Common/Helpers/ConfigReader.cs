@@ -1,8 +1,8 @@
-using Framework.Api.Enums;
-using Framework.Api.Extensions;
+using Common.Enums;
+using Common.Extensions;
 using Microsoft.Extensions.Configuration;
 
-namespace Framework.Api.Helpers;
+namespace Common.Helpers;
 
 public static class ConfigReader
 {

@@ -1,4 +1,4 @@
-namespace Framework.Api.Helpers;
+namespace Common.Helpers;
 
 public static class MyLogger
 {

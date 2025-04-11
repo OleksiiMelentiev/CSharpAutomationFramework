@@ -1,5 +1,5 @@
-using Framework.Api.Helpers;
-using Framework.Api.Models.Requests;
+using Common.Helpers;
+using Models.Requests;
 
 namespace Framework.Api.Clients;
 

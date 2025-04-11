@@ -1,5 +1,5 @@
-using Framework.Api.EnvConfigs;
-using Framework.Api.Helpers;
+using Common.EnvConfigs;
+using Common.Helpers;
 using NUnit.Framework;
 
 namespace Framework.Api.Tests;

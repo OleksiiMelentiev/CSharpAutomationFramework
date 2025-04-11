@@ -4,9 +4,9 @@ using Framework.Api.TestDataLists;
 
 namespace Framework.Api.Tests;
 
-public class ApiTestBase
+public class ApiTestBase : TestBase
 {
-    protected ClientsList Clients = ClientsList.Get();
-    protected ExpectedResultsList ExpectedResults = ExpectedResultsList.Get();
-    protected TestDataList TestData = TestDataList.Get();
+    protected readonly ClientsList Clients = ClientsList.Get();
+    protected readonly ExpectedResultsList ExpectedResults = ExpectedResultsList.Get();
+    protected readonly TestDataList TestData = TestDataList.Get();
 }

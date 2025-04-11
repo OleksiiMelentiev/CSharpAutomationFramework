@@ -1,7 +1,7 @@
-using Framework.Api.Enums;
-using Framework.Api.Helpers;
+using Common.Enums;
+using Common.Helpers;
 
-namespace Framework.Api.EnvConfigs;
+namespace Common.EnvConfigs;
 
 public class EnvConfig
 {
@@ -29,9 +29,9 @@ public class EnvConfig
     {
         return Env switch
         {
-            Env.Localhost => "http://localhost:5000/api",
+            Env.Localhost => "http://localhost:5400/api",
 
-            _ => throw new ArgumentOutOfRangeException("Not implemented")
+            _ => throw new ArgumentOutOfRangeException(nameof(Env), "Not implemented")
         };
     }
 

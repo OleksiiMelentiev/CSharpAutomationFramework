@@ -1,4 +1,4 @@
-using Framework.Api.EnvConfigs;
+using Common.EnvConfigs;
 
 namespace Framework.Api.Clients;
 

@@ -3,6 +3,7 @@ using Tests.Api.TestDataSources;
 
 namespace Tests.Api.Tests;
 
+[TestFixture]
 public class PersonTests : ApiTestBase
 {
     [Test]

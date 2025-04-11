@@ -1,8 +1,8 @@
-using Framework.Api.Models.Requests;
+using Models.Requests;
 
 namespace Framework.Api.TestData;
 
-public class PersonTestData  : TestDataBase
+public class PersonTestData : TestDataBase
 {
     public CreatePersonRequest GetCreatePersonRequest(bool includeBirthDate)
     {

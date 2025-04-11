@@ -2,7 +2,7 @@ using System.Net.Http.Headers;
 using System.Net.Mime;
 using System.Text;
 
-namespace Framework.Api.Helpers;
+namespace Common.Helpers;
 
 public static class HttpHelper
 {
