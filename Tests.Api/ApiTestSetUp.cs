@@ -11,7 +11,7 @@ public class ApiTestSetUp
     private MocksList Mocks { get; } = MocksList.Get();
 
     [OneTimeSetUp]
-    public void HppApiMocksOneTimeSetUp()
+    public void ApiMocksOneTimeSetUp()
     {
         if (EnvConfig.Env == Env.Localhost)
         {
@@ -25,7 +25,7 @@ public class ApiTestSetUp
 
 
     [OneTimeTearDown]
-    public void PopApiTestBaseOneTimeTearDown()
+    public void ApiTestBaseOneTimeTearDown()
     {
         Mocks.Dispose();
     }

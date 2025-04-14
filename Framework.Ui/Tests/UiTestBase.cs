@@ -2,7 +2,7 @@ using Framework.Api.Tests;
 using Framework.Ui.ExpectedResultsLists;
 using Framework.Ui.Helpers;
 using Framework.Ui.PagesLists;
-using Framework.Ui.TestDataManagersLists;
+using Framework.Ui.TestDataLists;
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
 
@@ -10,9 +10,9 @@ namespace Framework.Ui.Tests;
 
 public class UiTestBase : TestBase
 {
-    protected ErListUi Er { get; set; } = ErListUi.Get();
+    protected ExpectedResultsListUi Er { get; set; } = ExpectedResultsListUi.Get();
     protected PagesList Pages { get; private set; } = PagesList.Get();
-    protected readonly TdmsListUi TestData = TdmsListUi.Get();
+    protected readonly TestDataListUi TestData = TestDataListUi.Get();
 
     private PlaywrightHelper Playwright => PlaywrightFactory.Get();
 
