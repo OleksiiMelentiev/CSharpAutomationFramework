@@ -1,11 +1,9 @@
-using Framework.Ui.TestData;
-
 namespace Framework.Ui.TestDataLists;
 
 public class TestDataListUi
 {
-    private TextBoxTestData? _textBox;
-    public TextBoxTestData TextBox => _textBox ??= new TextBoxTestData();
+    private ElementsTestDataList? _elements;
+    public ElementsTestDataList Elements => _elements ??= new ElementsTestDataList();
 
 
     private static TestDataListUi? _instance;

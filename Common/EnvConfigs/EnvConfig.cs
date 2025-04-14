@@ -6,6 +6,7 @@ namespace Common.EnvConfigs;
 public class EnvConfig
 {
     public string ApiUrl { get; }
+    public string UiUrl { get; }
     public Env Env { get; }
     public string ReportDir { get; private set; }
 
@@ -22,7 +23,10 @@ public class EnvConfig
         Env = ConfigReader.GetEnvironment();
         ReportDir = GetReportDir();
         ApiUrl = GetApiUrl();
+        UiUrl = GetUiUrl();
     }
+
+
 
 
     private string GetApiUrl()
@@ -60,5 +64,15 @@ public class EnvConfig
         IoHelper.CreateFolderIfDoesNotExist(dir);
 
         return dir;
+    }
+    
+    private string? GetUiUrl()
+    {
+        return Env switch
+        {
+            Env.Localhost => "https://demoqa.com",
+
+            _ => throw new ArgumentOutOfRangeException(nameof(Env), "Not implemented")
+        };
     }
 }

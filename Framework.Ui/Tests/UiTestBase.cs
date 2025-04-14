@@ -10,7 +10,7 @@ namespace Framework.Ui.Tests;
 
 public class UiTestBase : TestBase
 {
-    protected ExpectedResultsListUi Er { get; set; } = ExpectedResultsListUi.Get();
+    protected ExpectedResultsListUi ExpectedResults { get; set; } = ExpectedResultsListUi.Get();
     protected PagesList Pages { get; private set; } = PagesList.Get();
     protected readonly TestDataListUi TestData = TestDataListUi.Get();
 

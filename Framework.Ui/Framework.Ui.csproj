@@ -13,6 +13,7 @@
     <ItemGroup>
       <ProjectReference Include="..\Common\Common.csproj" />
       <ProjectReference Include="..\Framework.Api\Framework.Api.csproj" />
+      <ProjectReference Include="..\Models.Ui\Models.Ui.csproj" />
     </ItemGroup>
 
 </Project>
