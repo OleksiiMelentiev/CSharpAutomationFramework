@@ -6,7 +6,7 @@ namespace Mocks;
 
 public abstract class MockBase
 {
-    protected WireMockServer? Server { get; set; }
+    protected static WireMockServer? Server { get; set; }
 
 
     public void RunServer()
