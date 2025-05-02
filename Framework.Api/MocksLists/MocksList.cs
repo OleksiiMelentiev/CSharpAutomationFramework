@@ -4,8 +4,11 @@ namespace Framework.Api.MocksLists;
 
 public class MocksList : IDisposable
 {
-    private readonly PersonMock _person = new();
+    private PersonMock? _person;
+    public PersonMock Person => _person ??= new PersonMock();
 
+    private BookMock? _book;
+    public BookMock Book => _book ??= new BookMock();
 
     private static MocksList? _instance;
     public static MocksList Get() => _instance ??= new MocksList();
@@ -14,16 +17,18 @@ public class MocksList : IDisposable
     {
     }
 
-
     public void Run()
     {
-        _person.RunServer();
+        Person.RunServer();
+        Book.RunServer();
         
-        _person.SetMocks();
+        Person.SetMocks();
+        Book.SetMocks();
     }
 
     public void Dispose()
     {
-        _person.StopServer();
+        Person.StopServer();
+        Book.StopServer();
     }
 }

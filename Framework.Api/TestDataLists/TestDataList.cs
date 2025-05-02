@@ -7,6 +7,8 @@ public class TestDataList
     private PersonTestData? _person;
     public PersonTestData Person => _person ??= new PersonTestData();
 
+    private BookTestData? _book;
+    public BookTestData Book => _book ??= new BookTestData();
 
     private static TestDataList? _instance;
     public static TestDataList Get() => _instance ??= new TestDataList();
